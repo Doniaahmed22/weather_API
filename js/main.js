@@ -1,5 +1,5 @@
 async function getData(country) {
-    let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=fc4166216e3b4f7bab5134637231108&q=${country}&days=3`);
+    let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=fc4166216e3b4f7bab5134637231108&q=${country}&days=3`);
     let data = await response.json();
     console.log(data.forecast.forecastday[0].day.condition.icon);
     display(data);
